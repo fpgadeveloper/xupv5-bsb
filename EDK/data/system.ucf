@@ -325,22 +325,26 @@ TIMESPEC "TS_MC_CAL_RDEN_DLY" = FROM "TNM_CAL_RDEN_DLY" TO FFS
 #  3. Any output-only site
 ###############################################################################
 
-INST "*/gen_dqs[0].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y56";
-INST "*/gen_dqs[0].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y56";
-INST "*/gen_dqs[1].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y18";
-INST "*/gen_dqs[1].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y18";
-INST "*/gen_dqs[2].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y22";
-INST "*/gen_dqs[2].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y22";
-INST "*/gen_dqs[3].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y60";
-INST "*/gen_dqs[3].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y60";
-INST "*/gen_dqs[4].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y62";
-INST "*/gen_dqs[4].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y62";
-INST "*/gen_dqs[5].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y216";
-INST "*/gen_dqs[5].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y216";
-INST "*/gen_dqs[6].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y220";
-INST "*/gen_dqs[6].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y220";
-INST "*/gen_dqs[7].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y222";
-INST "*/gen_dqs[7].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y222";
+INST "*/gen_dqs[0].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y96";
+INST "*/gen_dqs[0].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y96";
+INST "*/gen_dqs[1].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y58";
+INST "*/gen_dqs[1].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y58";
+INST "*/gen_dqs[2].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y62";
+INST "*/gen_dqs[2].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y62";
+INST "*/gen_dqs[3].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y100";
+INST "*/gen_dqs[3].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y100";
+INST "*/gen_dqs[4].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y102";
+INST "*/gen_dqs[4].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y102";
+INST "*/gen_dqs[5].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y256";
+INST "*/gen_dqs[5].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y256";
+INST "*/gen_dqs[6].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y260";
+INST "*/gen_dqs[6].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y260";
+INST "*/gen_dqs[7].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y262";
+INST "*/gen_dqs[7].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y262";
+
+INST "DDR2_SDRAM/DDR2_SDRAM/gen_no_iodelay_grp.gen_instantiate_idelayctrls[1].idelayctrl0" LOC = IDELAYCTRL_X0Y2;
+INST "DDR2_SDRAM/DDR2_SDRAM/gen_no_iodelay_grp.gen_instantiate_idelayctrls[0].idelayctrl0" LOC = IDELAYCTRL_X0Y6;
+INST "DDR2_SDRAM/DDR2_SDRAM/gen_no_iodelay_grp.gen_instantiate_idelayctrls[2].idelayctrl0" LOC = IDELAYCTRL_X0Y1;
 
 ###############################################################################
 # LOC and timing constraints for flop driving DQS CE enable signal
@@ -351,14 +355,14 @@ INST "*/gen_dqs[7].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y222";
 # absolute delay of the path
 ###############################################################################
 
-INST "*/u_phy_calib_0/gen_gate[0].u_en_dqs_ff"  LOC = SLICE_X0Y28;
-INST "*/u_phy_calib_0/gen_gate[1].u_en_dqs_ff"  LOC = SLICE_X0Y9;
-INST "*/u_phy_calib_0/gen_gate[2].u_en_dqs_ff"  LOC = SLICE_X0Y11;
-INST "*/u_phy_calib_0/gen_gate[3].u_en_dqs_ff"  LOC = SLICE_X0Y30;
-INST "*/u_phy_calib_0/gen_gate[4].u_en_dqs_ff"  LOC = SLICE_X0Y31;
-INST "*/u_phy_calib_0/gen_gate[5].u_en_dqs_ff"  LOC = SLICE_X0Y108;
-INST "*/u_phy_calib_0/gen_gate[6].u_en_dqs_ff"  LOC = SLICE_X0Y110;
-INST "*/u_phy_calib_0/gen_gate[7].u_en_dqs_ff"  LOC = SLICE_X0Y111;
+INST "*/u_phy_calib_0/gen_gate[0].u_en_dqs_ff"  LOC = SLICE_X0Y48;
+INST "*/u_phy_calib_0/gen_gate[1].u_en_dqs_ff"  LOC = SLICE_X0Y29;
+INST "*/u_phy_calib_0/gen_gate[2].u_en_dqs_ff"  LOC = SLICE_X0Y31;
+INST "*/u_phy_calib_0/gen_gate[3].u_en_dqs_ff"  LOC = SLICE_X0Y50;
+INST "*/u_phy_calib_0/gen_gate[4].u_en_dqs_ff"  LOC = SLICE_X0Y51;
+INST "*/u_phy_calib_0/gen_gate[5].u_en_dqs_ff"  LOC = SLICE_X0Y128;
+INST "*/u_phy_calib_0/gen_gate[6].u_en_dqs_ff"  LOC = SLICE_X0Y130;
+INST "*/u_phy_calib_0/gen_gate[7].u_en_dqs_ff"  LOC = SLICE_X0Y131;
 
 # Control for DQS gate - from fabric flop. Prevent "runaway" delay -
 # two parts to this path: (1) from fabric flop to IDELAY, (2) from
@@ -461,5 +465,20 @@ TIMESPEC "TS_DQ_CE" = FROM "TNM_DQ_CE_IDDR" TO "TNM_DQS_FLOPS" 1.9 ns;
 #INST "*/gen_dq[63].u_iob_dq/gen_stg2_*.u_ff_stg2a_rise"  RLOC_ORIGIN = X0Y119;          #  L24       X0Y119   
                                                                                             
                                                                                             
+###############################################################################
+# PCIe Bridge Constraints
+###############################################################################
+
+# BlockRAM placement
+INST "pcie_bridge/*pcie_mim_wrapper_i/bram_tl_tx/generate_tdp2[1].ram_tdp2_inst"  LOC = RAMB36_X3Y11;
+INST "pcie_bridge/*pcie_mim_wrapper_i/bram_tl_rx/generate_tdp2[1].ram_tdp2_inst"  LOC = RAMB36_X3Y9;
+INST "pcie_bridge/*pcie_mim_wrapper_i/bram_tl_tx/generate_tdp2[0].ram_tdp2_inst"  LOC = RAMB36_X3Y10;
+INST "pcie_bridge/*pcie_mim_wrapper_i/bram_tl_rx/generate_tdp2[0].ram_tdp2_inst"  LOC = RAMB36_X3Y8;
+INST "pcie_bridge/*pcie_mim_wrapper_i/bram_retry/generate_sdp.ram_sdp_inst"         LOC = RAMB36_X3Y7;
+
+# Timing critical placements
+INST "pcie_bridge/*tx_bridge/shift_pipe1"                 LOC = "SLICE_X59Y56";
+INST "pcie_bridge/*arb_inst/completion_available"         LOC = "SLICE_X58Y46";
+INST "pcie_bridge/*management_interface/mgmt_rdata_d1_3"  LOC = "SLICE_X59Y45";
 
 
